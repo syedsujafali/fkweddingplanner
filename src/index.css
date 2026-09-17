@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-[#F5F5DC] text-[#4A0E4E];
+  }
+  
+  /* Custom serif font for headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom selection color */
+  ::selection {
+    background-color: #D4AF37;
+    color: #5D1A2A;
+  }
+}
+
+@layer components {
+  /* Gold divider utility */
+  .gold-divider {
+    @apply w-full h-[1px] bg-[#D4AF37];
+  }
+  
+  /* Burgundy background utility */
+  .bg-burgundy {
+    @apply bg-[#5D1A2A];
+  }
+  
+  /* Ivory background utility */
+  .bg-ivory {
+    @apply bg-[#F5F5DC];
+  }
+  
+  /* Gold text utility */
+  .text-gold {
+    @apply text-[#D4AF37];
+  }
+  
+  /* Burgundy text utility */
+  .text-burgundy {
+    @apply text-[#5D1A2A];
+  }
+  
+  /* Ivory text utility */
+  .text-ivory {
+    @apply text-[#F5F5DC];
+  }
+}
+
+@layer utilities {
+  /* Text tracking utilities */
+  .tracking-widest-xl {
+    letter-spacing: 0.3em;
+  }
+  
+  .tracking-wider-xl {
+    letter-spacing: 0.2em;
+  }
+  
+  /* Custom animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-left {
+    animation: slideLeft 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-right {
+    animation: slideRight 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
